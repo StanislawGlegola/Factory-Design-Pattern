@@ -19,14 +19,12 @@ class AVIPlayer implements VideoRecorder {
 }
 
 class PlayerFactory {
-    public VideoRecorder player(String filepath){
-        if (filepath.endsWith(".avi")){
+    public VideoRecorder player(String filepath) {
+        if (filepath.endsWith(".avi")) {
             return new AVIPlayer();
-        }
-        else if (filepath.endsWith(".mp4")){
+        } else if (filepath.endsWith(".mp4")) {
             return new MP4Player();
-        }
-        else {
+        } else {
             return null;
         }
     }

@@ -50,7 +50,8 @@ public class Main1 {
         FormatReaderFactory formatReader = new FormatReaderFactory();
 
         PhotoViever reader = formatReader.reader(fileName);
-
-        reader.showPhoto(fileName);
+        if (reader != null) {
+            reader.showPhoto(fileName);
+        }
     }
 }
